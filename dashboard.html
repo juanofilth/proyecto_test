@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style_global.css" />
+  <script src="js/scripts.js"> </script>
+  <title>Dashboard - Biblioteca</title>
+ 
+</head>
+<body>
+
+<!-- Barra superior -->
+<header class="topbar">
+  <button id="toggleMenu" class="menu_hamburguesa">
+  ☰
+  </button>
+
+  <div class="topbar-content">
+    <p class="user-top">Usuario: <b id="nombreUsuario"></b></p>
+    <p class="user-top">Nombre:  <b id="nombrecompleto"></b></p>
+       <div class="notificaciones" id="btnNotificaciones">
+      <span class="icono">🔔</span>
+      <span class="badge" id="badge"></span>
+    </div>
+    <div class="perfil" id="btnperfil">
+      <span class="icono">👤</span>
+    </div>
+  </div>
+</header>
+
+<!-- Modal de notificaciones -->
+<div id="modalNotificaciones" class="modal">
+  <div class="modal-content">
+    <h2>Notificaciones</h2>
+    <ul id="listaNotificaciones"></ul>
+    <button id="cerrarModal">Cerrar</button>
+  </div>
+</div>
+
+<!-- Modal de info de usuario perfil -->
+<div id="modaluserinfo" class="modal">
+  <div class="modal-content">
+    <h2>PERFIL DE USUARIO</h2>
+    <uL>
+      <li> <b> Nombre: Juan Jose</b> </li>
+      <li> <b> Apellido: Murillo Aguirre </b> </li>
+      <li> <b> Perfil: Admin</b> </li>
+      <li> <b> Email: juan@gmail.com </b> </li>
+     
+    </ul>
+    <button id="cerrarModaluser">Cerrar</button>
+  </div>
+</div>
+
+<nav>
+  
+  <h2 class="titulo_menu">Biblioteca v 1.0</h2>
+  <ul>
+    <li>
+      <a href="#">Inicio</a>
+    </li>
+
+    <li class="submenu">
+      <a href="#">Libros ▾</a>
+      <ul class="subitems">
+        <li><a href="registrar_libros.html">Registrar libro</a></li>
+        <li><a  href="administrar_libros.html">Administrar libros</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#">Usuarios</a>
+    </li>
+
+    <li class="submenu">
+      <a href="#">Préstamos ▾</a>
+      <ul class="subitems">
+        <li><a href="libros_prestados.html">Libros Prestados</a></li>
+        <li><a  href="#">Reporte prestados</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="libros_devolucion.html" >Devoluciones</a>
+    </li>
+  </ul>
+
+  <div class="logout">
+    <a  href="index.html">Cerrar sesión</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- inicio esto es lo que se ve primero al cargar el skeleton  -->
+  <section id="skeleton-resumen" class="resumen-contenedor">
+    <div class="skeleton skeleton-title"></div>
+    <div class="skeleton skeleton-title" style="width:70%"></div>
+    <div class="resumen">
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+    </div>
+  </section>
+<!--  fin esto es lo que se ve primero al cargar -->
+<section id="resumen" class="resumen-contenedor" style="display: none;">
+   <h1 id="saludo">  </h1>
+   <h1>Bienvenido al Panel de la Biblioteca</h1>
+  <div class="resumen">
+    <article class="card">
+      <h3>Libros disponibles</h3>
+      <p>Hay 120 libros disponibles.</p>
+    </article>
+    <article class="card">
+      <h3>Libros prestados</h3>
+      <p>35 libros están prestados actualmente.</p>
+    </article>
+    <article class="card">
+      <h3>Nuevos usuarios</h3>
+      <p>Hoy se registraron 5 nuevos usuarios.</p>
+    </article>
+    <article class="card">
+      <h3>Libros dados de baja</h3>
+      <p>Hoy se eliminaron 3 libros del sistema.</p>
+    </article>
+  </div>
+</section>
+
+
+
+<section>
+  <article class="acciones">
+    <h2>Últimas Acciones</h2>
+    <ul>
+      <li>Juan Pérez devolvió "Cien Años de Soledad".</li>
+      <li>María Gómez solicitó el libro "El Principito".</li>
+      <li>Nuevo usuario registrado: Andrés Ruiz.</li>
+    </ul>
+  </article>
+</section>
+  <footer> copyright © derechos reservados 2025  
+    <a href="terminosycondiciones.html"> <p> ver terminos y condiciones </p> </a>
+  </footer>
+
+  </main>
+
+
+
+</body>
+</html>

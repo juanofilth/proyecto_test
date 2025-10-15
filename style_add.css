@@ -1,0 +1,451 @@
+
+/* 
+Archivo style.css con clases y estilos para la interface del sistema
+Desarrollador: Juan Jose Murillo
+Email: juanofilth@gmail.com
+fecha: 8 julio 2025 
+
+*/
+
+    main.fullwidth {
+      margin-left: 0; /* Elimina el espacio del menú */
+    }
+
+    /* Barra superior */
+    .topbar {
+      margin-left: 220px;
+      transition: margin-left 0.3s ease, width 0.3s ease;
+      position: fixed;
+      top: 0;
+      left: 0px;
+      right: 0;
+      z-index: 1000000; /* asegura que esté encima del menú */
+      background-color: #36618b;
+      color: white;
+      height: 50px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+        /* Cuando el menú se oculte */
+    .topbar.fullwidth {
+      margin-left: 0;
+    }
+
+    .topbar-content {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .topbar .icono {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .notificaciones {
+      position: relative;
+    }
+
+    .badge {
+      position: absolute;
+      top: -6px;
+      right: -10px;
+      background-color: red;
+      color: white;
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: 50%;
+       
+    }
+
+
+    .badge {
+      background: red;
+      color: white;
+      border-radius: 50%;
+      padding: 4px 7px;
+      font-size: 12px;
+      font-weight: bold;
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      display: inline-block;
+      animation: Animacion-caida  0.6s ease-out; /* animación por defecto */
+    }
+
+    @keyframes Animacion-caida {
+    0% {
+      transform: translateY(-100px); /* empieza arriba del todo */
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(10px); /* rebota hacia abajo */
+      opacity: 1;
+    }
+    80% {
+      transform: translateY(-5px); /* rebote hacia arriba */
+    }
+    100% {
+      transform: translateY(0); /* se queda fijo en su lugar */
+    }
+  }
+
+
+
+
+    body {
+      padding-top: 50px; /* deja espacio para la barra */
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100vh;
+      background-color: #bad7f5;
+      color: rgb(10, 58, 92);
+      padding: 20px;
+    }
+
+
+    nav h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 15px 0;
+    }
+
+    nav ul li a {
+      color: rgb(11, 77, 164);
+      text-decoration: none;
+      display: block;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    nav ul li a:hover {
+      background-color: #6bb1f7;
+    }
+
+    main {
+      flex: 1;
+      margin-left: 220px; /* El mismo ancho de tu nav */
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    article {
+      background-color: white;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    .logout {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .logout a {
+      color: #e74c3c;
+      text-decoration: none;
+    }
+
+    .logout a:hover {
+      text-decoration: underline;
+    }
+
+    .submenu {
+    position: relative;
+    }
+
+    .submenu .subitems {
+      display: none;
+      list-style: none;
+      padding-left: 15px;
+      margin: 5px 0 0 0;
+    }
+
+    .submenu:hover .subitems {
+      display: block;
+    }
+
+    .subitems li a {
+      font-size: 0.95em;
+      background-color: #9ac3ec;
+      padding: 6px;
+      border-radius: 4px;
+      margin-top: 4px;
+    }
+    .subitems li a:hover {
+      background-color: #a8bfe6;
+      color: white;
+    }
+
+    .resumen-contenedor {
+      max-width: 900px;
+      margin: 0 auto 30px auto;
+    } 
+
+    .resumen {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1 1 250px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .acciones {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    footer{
+      width: 100%;
+      text-align: center !important;
+    }
+
+    /* Botón hamburguesa: visible SIEMPRE */
+    .menu_hamburguesa {
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      color: rgb(255, 255, 255);
+
+    }
+
+    /* Clase para ocultar el menú */
+    nav.oculto {
+      display: none;
+    }
+
+    .titulomenu{
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    /* Clase para tablas en listar libros*/
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #2c3e50;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Estilo base del chip activo / inactivo  */
+    .chip {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      min-width: 80px;
+    }
+
+    /* Colores por estado */
+    .chip.activo {
+      background-color: #78da8e; /* Verde */
+    }
+
+    .chip.inactivo {
+      background-color: #e8a5ac; /* Rojo */
+    }
+
+    /* Opcional: más estados  */
+    .chip.pendiente {
+      background-color: #ffc107; /* Amarillo */
+      color: #212529;
+    }
+
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+    }
+
+    label {
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .titulo_menu{
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+
+    .button_registrar {
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button_registrar:hover {
+      background-color: #0056b3;
+    }
+
+  
+    @media (max-width: 768px) {
+
+      .submenu .subitems {
+        display: block;
+      }
+
+      .labels-top{
+        display: none;
+      }
+      .user-top{
+        display: none;
+      }
+
+    }
+
+/* ventana modal notificaciones*/
+.notificaciones {
+  position: relative; /* El modal se posicionará respecto a este contenedor */
+  display: inline-block;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 35px;  
+  right: 10px;
+  background: rgba(0,0,0,0.5);  
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  width: 250px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content ul {
+  padding: 0;
+  list-style: none;
+}
+
+.modal-content li {
+  border-bottom: 1px solid #ccc;
+  padding: 6px 0;
+}
+
+
+/* Skeleton base */
+.skeleton {
+  background: #ddd;
+  border-radius: 4px;
+  min-height: 20px;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { background-color: #ddd; }
+  50% { background-color: #ccc; }
+  100% { background-color: #ddd; }
+}
+.skeleton-title {
+  width: 50%;
+  height: 25px;
+  margin: 10px 0;
+}
+.skeleton-card {
+  width: 100%;
+  height: 60px;
+  margin: 10px 0;
+}
+
+
+  
+
+
+
+
