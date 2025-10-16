@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+  <title>login</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="js/scripts.js"> </script>
+ 
+</head>
+<body>
+<!--   <header>Mi sitio</header>
+  <nav>Menú</nav> -->
+
+<main>
+  <!-- Contenedor general de los 3 bloques (puede ser un section o un div con clase para estilo) -->
+  <section class="contenedor-principal" >
+
+    <div style="width: 100%; text-align: center;">
+      <h2>Bienvenidos a nuestra Plataforma</h2>
+      <p>EPuedes ingresar onc los datos de usuario o contraseña.</p>
+
+    </div>
+
+    <!-- Bloque 1: imagen -->
+    <article class="bloque" >
+      <!-- Aquí va la imagen -->
+       <img src="images/imagen-logo.png" alt="imagen de logo corporativo" width="65%">
+     
+    </article>
+
+    <!-- Bloque 2: texto -->
+    <article class="bloque fondo_articulo" >
+      <!-- Aquí va el texto -->
+      <h2>Biblioteca v 1.0</h2>
+      <p>Sistema de gestion de biblioteca.</p>
+    </article>
+
+    <!-- Bloque 3: formulario -->
+    <article class="bloque">
+    <form>
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" />
+          <br><span id="errorUsuario" class="error">El usuario es obligatorio</span>
+        <br><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" />
+        <button type="button" id="togglePassword" style="cursor:pointer"> 👁️‍🗨️ </button>
+         <br> <span id="errorPassword" class="error">La contraseña es obligatoria</span>
+        <br><br>
+        <button onclick="login()" type="button">Login</button>
+        <br>
+        <button type="button">Restablecer contraseña</button>
+      </form>
+      <!-- Aquí va el formulario de login -->
+ 
+    </article>
+
+  </section>
+</main>
+
+
+<footer>
+  <p>Copyright © Derechos reservados 2025</p>
+  <p><a href="terminosycondiciones.html">Ver términos y condiciones</a></p>
+</footer>
+
+
+</body>

@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+  background-image: url(../images/background.png);
+}
+
+main {
+  display: flex;
+  justify-content: center; /* Centra el section horizontalmente */
+  padding: 50px 0;
+}
+ 
+
+.contenedor-principal {
+  display: flex;               /* ← ACTIVA el modo horizontal */
+  gap: 40px;                   /* ← Espacio entre bloques */
+  justify-content: center;    /* ← Centra horizontalmente los bloques */
+  align-items: center;        /* ← Centra verticalmente los bloques */
+  flex-wrap: wrap;            /* ← Permite que se adapten si el espacio es pequeño */
+}
+
+.bloque {
+  background-color: white;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+footer{
+  width: 100%;
+  text-align: center !important;
+}
+
+.fondo_articulo {
+  background-color: rgb(192, 209, 225) ;
+}
+
+.error {
+  color: crimson;
+  font-size: smaller;
+  display: none ;
+}
+
+input.error-input {
+  border: 2px solid crimson;
+}
+
+
+

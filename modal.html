@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Modal Básico</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Fondo oscuro detrás del modal */
+  .modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Oscurece el fondo */
+  }
+
+  /* Contenido del modal */
+  .modal-contenido {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  /* Botón cerrar */
+  .cerrar {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+  }
+</style>
+</head>
+<body>
+
+<!-- Botón que abre el modal -->
+<button id="abrirModal">Abrir Modal</button>
+
+<!-- Estructura del modal -->
+<div id="miModal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar">&times;</span>
+    <h2>Hola!</h2>
+    <p>Este es un modal básico en HTML.</p>
+  </div>
+</div>
+
+<script>
+  // Referencias
+  const modal = document.getElementById("miModal");
+  const btnAbrir = document.getElementById("abrirModal");
+  const btnCerrar = document.querySelector(".cerrar");
+
+  // Abrir modal
+  btnAbrir.onclick = () => modal.style.display = "block";
+
+  // Cerrar modal con la X
+  btnCerrar.onclick = () => modal.style.display = "none";
+
+  // Cerrar modal si se hace clic fuera del contenido
+  window.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+</body>
+</html>
